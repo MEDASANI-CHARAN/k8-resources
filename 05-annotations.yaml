@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: annotations
+  labels:
+    course: k8s
+    trainer: charan
+  annotations:
+    kubernetes.io/created-by: 'Charan'
+    jenkins.build.url: 'https://jenkins.daws2025.online/expense/job/backend'
+spec:
+  containers:
+  - name: nginx
+    image: nginx
