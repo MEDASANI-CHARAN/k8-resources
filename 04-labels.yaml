@@ -5,6 +5,7 @@ metadata:
   labels:
     course: k8s
     trainer: charan
+    jenkins.build.url: 'https://jenkins.daws2025.online/expense/job/backend'
 spec:
   containers:
   - name: nginx
