@@ -1,30 +1,31 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: nginx
-  # these labels belongs to replicaset resource
+  name: nginx-deploment
+  # these labels belongs to deplyment resource
   labels:
-    name: frontend
+    name: deployment
     project: expense
     component: frontend
     environment: dev
-    tier: frontend
     app: nginx
+    tier: deployment
 spec:
   # modify replicas according to your case
   replicas: 3
   selector:
     matchLabels:
-      tier: frontend
+      tier: deployment
       app: nginx
     # below is the pod defination
   template:
     metadata:
       labels:
-        tier: frontend
+        tier: deployment
         app: nginx
         project: some-project
+        extra-key: extra-value
     spec:
       containers:
       - name: nginx
-        image: nginx:stable-otel
+        image: nginx
