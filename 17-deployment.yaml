@@ -12,7 +12,7 @@ metadata:
     tier: deployment
 spec:
   # modify replicas according to your case
-  replicas: 20
+  replicas: 3
   selector:
     matchLabels:
       tier: deployment
