@@ -1,5 +1,5 @@
-apiVersion: v1
-kind: Replicaset
+apiVersion: apps/v1
+kind: ReplicaSet
 metadata:
   name: nginx
   # these labels belongs to replicaset resource
@@ -13,18 +13,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      name: frontend
-      project: expense
-      component: frontend
-      environment: dev
+      tier: frontend
+      app: nginx
     # below is the pod defination
   template:
     metadata:
       labels:
-        name: frontend
-        project: expense
-        component: frontend
-        environment: dev
+        tier: frontend
+        app: nginx
         project: some-project
     spec:
       containers:
