@@ -12,7 +12,7 @@ metadata:
     tier: deployment
 spec:
   # modify replicas according to your case
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       tier: deployment
@@ -27,5 +27,6 @@ spec:
         extra-key: extra-value
     spec:
       containers:
-      - name: nginx
-        image: nginx:stable-otel
+      - name: mysql
+        image: charan466/mysql:1.0.0
+
