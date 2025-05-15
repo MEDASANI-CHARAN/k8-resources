@@ -4,7 +4,6 @@ metadata:
   name: ebs-dynamic-claim
 spec:
   storageClassName: "expense-ebs" # Empty string must be explicitly set otherwise default StorageClass will be set
-  volumeName: ebs-d1
   accessModes:
     - ReadWriteOnce
   resources:
