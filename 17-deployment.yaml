@@ -23,6 +23,6 @@ spec:
         extra-key: extra-value
     spec:
       containers:
-      - name: mysql
-        image: charan466/mysql:1.0.0
+      - name: nginx
+        image: nginx
 
