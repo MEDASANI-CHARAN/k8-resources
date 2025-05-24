@@ -9,7 +9,7 @@ metadata:
     component: frontend2
 spec:
   # modify replicas according to your case
-  replicas: 2
+  replicas: 20
   selector:
     matchLabels:
       tier: frontend
