@@ -4,26 +4,23 @@ metadata:
   name: nginx
   # these labels belongs to replicaset resource
   labels:
-    name: frontend
-    project: expense
-    component: frontend
-    environment: dev
-    tier: frontend
-    app: nginx
+    name: frontend1
+    project: expense1
+    app: nginx1
 spec:
   # modify replicas according to your case
   replicas: 3
   selector:
     matchLabels:
-      tier: frontend
-      app: nginx
+      tier: frontend2
+      app: nginx2
     # below is the pod defination
   template:
     metadata:
       labels:
-        tier: frontend
-        app: nginx
-        project: some-project
+        tier: frontend3
+        app: nginx3
+        project: some-project3
     spec:
       containers:
       - name: nginx
