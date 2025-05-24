@@ -12,13 +12,13 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      tier: deployment
+      tier: frontend
       app: nginx
     # below is the pod defination
   template:
     metadata:
       labels:
-        tier: deployment
+        tier: frontend
         app: nginx
         extra-key: extra-value
     spec:
