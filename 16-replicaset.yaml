@@ -12,15 +12,15 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      tier: frontend2
-      app: nginx2
+      tier: frontend
+      app: nginx
     # below is the pod defination
   template:
     metadata:
       labels:
-        tier: frontend3
-        app: nginx3
-        project: some-project3
+        tier: frontend
+        app: nginx
+        project: some-project
     spec:
       containers:
       - name: nginx
