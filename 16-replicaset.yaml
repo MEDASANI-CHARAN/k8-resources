@@ -13,7 +13,7 @@ spec:
   selector:
     matchLabels:
       tier: frontend
-      app: nginx
+      app: nginx1
     # below is the pod defination
   template:
     metadata:
@@ -24,4 +24,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:stable-otel
+        image: nginx
