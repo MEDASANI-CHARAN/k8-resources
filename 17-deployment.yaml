@@ -4,12 +4,9 @@ metadata:
   name: nginx-deploment
   # these labels belongs to deplyment resource
   labels:
-    name: deployment
-    project: expense
-    component: frontend
-    environment: dev
-    app: nginx
-    tier: deployment
+    name: deployment2
+    project: expense2
+    component: frontend2
 spec:
   # modify replicas according to your case
   replicas: 2
@@ -23,7 +20,6 @@ spec:
       labels:
         tier: deployment
         app: nginx
-        project: some-project
         extra-key: extra-value
     spec:
       containers:
