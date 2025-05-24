@@ -13,7 +13,7 @@ spec:
   selector:
     matchLabels:
       tier: frontend
-      app: nginx1
+      app: nginx
     # below is the pod defination
   template:
     metadata:
