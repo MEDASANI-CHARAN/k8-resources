@@ -66,4 +66,4 @@ spec:
     port: 80 #service-port
     targetPort: 80 #target-port
     # nodePort: 32761
-    
+  
