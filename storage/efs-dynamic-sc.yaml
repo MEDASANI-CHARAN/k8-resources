@@ -8,5 +8,5 @@ parameters:
   directoryPerms: "750"
   # gidRangeStart: "1000"
   # gidRangeEnd: "2000"
-  fileSystemId: "fs-0404f2ddb5bed4039"
+  fileSystemId: "fs-0972b0db4333bda97"
   basePath: "/expense" # optional
