@@ -18,7 +18,7 @@ kind: Pod
 metadata:
   name: pod-2
   labels:
-    name: chandu
+    project: chandu
     purpose: affinity
 spec:
   affinity:
