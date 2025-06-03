@@ -15,4 +15,4 @@ spec:
     value: "expense"
     effect: "NoSchedule"
   nodeSelector:
-    topology.kubernetes.io/zone: us-east-1a
+    topology.kubernetes.io/zone: us-east-1d
