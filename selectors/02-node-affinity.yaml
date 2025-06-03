@@ -15,12 +15,3 @@ spec:
   containers:
   - name: with-node-affinity
     image: nginx
-
----
-
-apiVersion: v1
-kind: Node
-metadata:
-  name: ip-192-168-57-11.ec2.internal
-  labels:
-    project: expense1 
