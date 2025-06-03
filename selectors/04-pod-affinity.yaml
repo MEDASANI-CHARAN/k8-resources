@@ -10,5 +10,28 @@ spec:
   - name: nginx
     image: nginx
     imagePullPolicy: Always # keep this as always
-  # nodeSelector:
-  #   topology.kubernetes.io/zone: us-east-1b
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    name: pod-2
+    purpose: affinity
+spec:
+  affinity:
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: name
+            operator: In
+            values:
+            - pod-2
+        topologyKey: topology.kubernetes.io/zone
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: Always # keep this as always
