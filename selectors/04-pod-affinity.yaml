@@ -18,7 +18,7 @@ kind: Pod
 metadata:
   name: pod-2
   labels:
-    project: chandu
+    project: chandu1
     purpose: affinity
 spec:
   affinity:
@@ -29,7 +29,7 @@ spec:
           - key: name
             operator: In
             values:
-            - pod-c
+            - pod-a
         topologyKey: topology.kubernetes.io/zone
   containers:
   - name: nginx
