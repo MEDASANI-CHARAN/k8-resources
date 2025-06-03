@@ -15,8 +15,3 @@ spec:
   containers:
   - name: with-node-affinity
     image: nginx
-  tolerations:
-  - key: "project"
-    operator: "Equal"
-    value: "expense"
-    effect: "NoSchedule"
