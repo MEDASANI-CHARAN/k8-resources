@@ -17,10 +17,10 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
               matchExpressions:
-              - key: project
+              - key: app
                 operator: In
                 values:
-                - charan
+                - store
             topologyKey: "kubernetes.io/hostname"
       containers:
       - name: redis-server
