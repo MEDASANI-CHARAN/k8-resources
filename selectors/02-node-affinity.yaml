@@ -11,7 +11,7 @@ spec:
           - key: project
             operator: In
             values:
-            - expense
+            - expense1
   containers:
   - name: with-node-affinity
     image: nginx
