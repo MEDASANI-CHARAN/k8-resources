@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-1
+  labels:
+    name: pod-a
+    purpose: affinity
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: Always # keep this as always
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-2
+  labels:
+    project: chandu2
+    purpose: affinity
+spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: name
+            operator: In
+            values:
+            - pod-a
+        topologyKey: topology.kubernetes.io/zone
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: Always # keep this as always
