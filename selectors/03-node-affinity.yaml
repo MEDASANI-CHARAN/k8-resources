@@ -6,12 +6,13 @@ spec:
   affinity:
     nodeAffinity:
       preferredDuringSchedulingIgnoredDuringExecution:
-        nodeSelectorTerms:
-        - matchExpressions:
-          - key: project
-            operator: In
-            values:
-            - charan
+      - weight: 1
+        preference:
+          - matchExpressions:
+            - key: project
+              operator: In
+              values:
+              - charan
   containers:
   - name: with-node-affinity
     image: nginx
