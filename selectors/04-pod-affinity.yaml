@@ -16,9 +16,9 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-b
+  name: pod-2
   labels:
-    name: pod-c
+    name: pod-b
     purpose: affinity
 spec:
   affinity:
@@ -29,7 +29,7 @@ spec:
           - key: name
             operator: In
             values:
-            - pod-d
+            - pod-c
         topologyKey: topology.kubernetes.io/zone
   containers:
   - name: nginx
