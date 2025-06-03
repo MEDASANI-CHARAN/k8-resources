@@ -29,7 +29,7 @@ spec:
           - key: name
             operator: In
             values:
-            - pod-a
+            - pod-b
         topologyKey: topology.kubernetes.io/zone
   containers:
   - name: nginx
